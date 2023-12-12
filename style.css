@@ -13,3 +13,32 @@
   text-align: center;
   background-color: white;
 }
+.new-task {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 30px;
+}
+.add {
+  padding: 10px;
+  border-radius: 5px;
+}
+button {
+  width: 90px;
+  padding: 10px;
+}
+
+.container-task {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.task {
+  width: 400px;
+  list-style-type: none;
+  padding-top: 10px;
+  border-bottom: 1px lightgrey solid;
+  display: flex;
+  justify-content: space-between;
+}
