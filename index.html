@@ -14,29 +14,27 @@
     <title>TODO</title>
   </head>
   <body>
-    <div id="app" data-v-app="">
+    <div id="app">
       <header>
         <h2 id="titolo">To do List</h2>
       </header>
       <main>
         <div class="new-task">
-          <input class="add" type="text" placeholder="Nuova Task" />
-          <button>AGGIUNGI</button>
+          <input class="add" type="text" placeholder="Nuova Task" v-model="message"/>
+          <button @click="addTask">AGGIUNGI</button>
         </div>
         <div class="container-task">
           <ul>
-            <li class="task">
-              compiti
-              <i class="fa-solid fa-xmark"></i>
+            <li class="task" v-for="(todo, index) in todos" :key="index">
+              <span :style="{ 'text-decoration': todo.done ? 'line-through' : 'none' }">
+              {{ todo.text }}
+              <i class="fa-solid fa-xmark" @click="delTask"></i>
             </li>
-            <li li class="task">spesa</li>
-            <li li class="task">bucato</li>
-          </ul>
+            
         </div>
       </main>
     </div>
-
-    <script src="script.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
